@@ -156,7 +156,7 @@ class Dashboard:
         Shows the dashboard.
         """
         if not _use_jupyter_dash and board.state.has_explanations():
-            app.run_server(host=host, port=port, debug=False)
+            app.run(host=host, port=port, debug=False)
         elif _use_jupyter_dash and board.state.has_explanations():
             app.run_server(mode="inline", host=host, port=port, debug=False)
         else:
